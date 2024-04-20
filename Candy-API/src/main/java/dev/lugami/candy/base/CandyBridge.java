@@ -10,20 +10,24 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Candy - An open source CPS API for Spigot 1.7.x - 1.8.x
+ * Candy - An open source CPS API for Spigot 1.8.x
  */
 public class CandyBridge {
 
     /**
      * cpsHandlers - A List for registering multiple dev.lugami.candy.base.CandyCPSHandler
      */
-    @Getter private static List<CandyCPSHandler> CPSHandlers = Lists.newArrayList();
+    @Getter private final static List<CandyCPSHandler> CPSHandlers = Lists.newArrayList();
 
     /**
-     * candyPlayers - A List for returning/adding multiple dev.lugami.candy.base.CandyPlayer
+     * candyPlayers - A Map for mapping org.bukkit.entity.Player to dev.lugami.candy.base.CandyPlayer
      */
-    @Getter private static Map<Player, CandyPlayer> candyPlayers = Maps.newHashMap();
-    @Getter private static Map<CandyPlayer, Integer> CPSPlayerMap = Maps.newHashMap();
+    @Getter private final static Map<Player, CandyPlayer> candyPlayers = Maps.newHashMap();
+
+    /**
+     * CPSPlayerMap - A Map for mapping dev.lugami.candy.base.CandyPlayer to their CPS (as an integer).
+     */
+    @Getter private final static Map<CandyPlayer, Integer> CPSPlayerMap = Maps.newHashMap();
 
     public static void registerHandler(CandyCPSHandler obj) {
         if (exists(obj)) {

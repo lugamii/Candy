@@ -18,6 +18,7 @@ public class CraftCandy implements Candy {
     @Override
     public CraftCandy setup() {
         plugin.getServer().getPluginManager().registerEvents(getListener(), plugin);
+        CandyBridge.registerHandler(new BaseCPSHandler(plugin));
         return this;
     }
 
@@ -33,7 +34,7 @@ public class CraftCandy implements Candy {
             }
 
             @EventHandler
-            public void onClick(PlayerInteractEvent event) {
+            public void onPlayerInteract(PlayerInteractEvent event) {
                 Player player = event.getPlayer();
                 if (event.getAction() == Action.LEFT_CLICK_AIR ||
                     event.getAction() == Action.LEFT_CLICK_BLOCK ||
