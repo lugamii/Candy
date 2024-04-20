@@ -14,10 +14,7 @@ import java.util.Map;
 
 public class CandyExample extends JavaPlugin {
 
-    private static CandyExample instance;
-
     public void onEnable() {
-        instance = this;
         new CraftCandy(this).setup();
         CandyBridge.registerHandler(new CPSHandler());
     }
