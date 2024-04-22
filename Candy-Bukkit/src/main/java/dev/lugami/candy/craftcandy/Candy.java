@@ -11,12 +11,11 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 @AllArgsConstructor
-public class CraftCandy implements Candy {
+public class Candy {
 
     private JavaPlugin plugin;
 
-    @Override
-    public CraftCandy setup() {
+    public Candy setup() {
         plugin.getServer().getPluginManager().registerEvents(getListener(), plugin);
         CandyBridge.registerHandler(new BaseCPSHandler(plugin));
         return this;

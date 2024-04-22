@@ -6,7 +6,7 @@ A lightweight CPS API for Spigot 1.8.x
 It's as simple as this to implement Candy into your plugin:
 
 ```java
-import dev.lugami.candy.craftcandy.CraftCandy;
+import dev.lugami.candy.craftcandy.Candy;
 import dev.lugami.candy.base.CandyBridge;
 
 public class CandyExample extends JavaPlugin {

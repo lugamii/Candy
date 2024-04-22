@@ -3,11 +3,8 @@ package dev.lugami.candy;
 import dev.lugami.candy.base.CandyBridge;
 import dev.lugami.candy.base.CandyCPSHandler;
 import dev.lugami.candy.base.CandyPlayer;
-import dev.lugami.candy.craftcandy.CraftCandy;
-import lombok.Getter;
-import org.bukkit.entity.Player;
+import dev.lugami.candy.craftcandy.Candy;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +12,7 @@ import java.util.Map;
 public class CandyExample extends JavaPlugin {
 
     public void onEnable() {
-        new CraftCandy(this).setup();
+        new Candy(this).setup();
         CandyBridge.registerHandler(new CPSHandler());
     }
 
