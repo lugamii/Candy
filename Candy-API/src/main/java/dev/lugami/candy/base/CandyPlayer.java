@@ -16,16 +16,4 @@ public interface CandyPlayer {
      */
     int getCPS();
 
-    /**
-     * getCPS - An method to return the max CPS amount/CPS limit for a player.
-     * @return The player's max CPS amount/CPS limit
-     */
-    int getMaxCPS();
-
-    /**
-     * setCPS - An method to set the max CPS amount/CPS limit for a player.
-     * @param value The CPS limit
-     */
-    void setMaxCPS(int value);
-
 }
