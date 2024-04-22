@@ -12,7 +12,7 @@ import dev.lugami.candy.base.CandyBridge;
 public class CandyExample extends JavaPlugin {
 
     public void onEnable() {
-        new CraftCandy(this).setup(); // Initializes Candy into your plugin
+        new Candy(this).setup(); // Initializes Candy into your plugin
         CandyBridge.registerHandler(new SimpleCPSHandler()); // Registers an CPS handler
     }
 
